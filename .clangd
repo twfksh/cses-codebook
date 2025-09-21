@@ -1,0 +1,50 @@
+CompileFlags:
+  Add:
+    - -std=c++20
+    - -Wall
+    - -Wextra
+    - -Wpedantic
+    - -Wconversion
+    - -Wsign-conversion
+    - -Wcast-qual
+    - -Wformat=2
+    - -Wundef
+    - -Werror=return-type
+    - -Werror=uninitialized
+    - -Wno-unused-parameter
+  Remove:
+    - -fcoroutines-ts
+    - -frounding-math
+
+Index:
+  Background: Build
+  StandardLibrary: Yes
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+  Designators: Yes
+
+Hover:
+  ShowAKA: Yes
+
+Diagnostics:
+  ClangTidy:
+    Add:
+      - modernize-*
+      - readability-*
+      - performance-*
+      - bugprone-*
+      - cppcoreguidelines-*
+      - misc-*
+    Remove:
+      - misc-use-anonymous-namespace
+      - modernize-use-trailing-return-type
+      - readability-braces-around-statements
+      - cppcoreguidelines-avoid-magic-numbers
+      - readability-magic-numbers
+      - misc-non-private-member-variables-in-classes
+
+Completion:
+  AllScopes: Yes

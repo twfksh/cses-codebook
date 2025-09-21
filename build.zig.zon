@@ -1,0 +1,7 @@
+.{
+    .name = .cses_codebook,
+    .version = "0.0.1",
+    .minimum_zig_version = "0.15.1",
+    .paths = .{""},
+    .fingerprint = 0x75037b58b35a38e6,
+}
