@@ -42,6 +42,7 @@ Diagnostics:
       - misc-use-anonymous-namespace
       - modernize-use-trailing-return-type
       - readability-braces-around-statements
+      - readability-identifier-length
       - cppcoreguidelines-avoid-magic-numbers
       - readability-magic-numbers
       - misc-non-private-member-variables-in-classes
