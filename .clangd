@@ -1,17 +1,14 @@
 CompileFlags:
   Add:
-    - -std=c++20
+    - -std=c++23
     - -Wall
     - -Wextra
-    - -Wpedantic
+    - -Wshadow
     - -Wconversion
-    - -Wsign-conversion
-    - -Wcast-qual
-    - -Wformat=2
-    - -Wundef
-    - -Werror=return-type
-    - -Werror=uninitialized
     - -Wno-unused-parameter
+    - -Wno-unused-variable
+    - -Wno-unused-result
+    - -Wfatal-errors
   Remove:
     - -fcoroutines-ts
     - -frounding-math
@@ -32,20 +29,17 @@ Hover:
 Diagnostics:
   ClangTidy:
     Add:
-      - modernize-*
-      - readability-*
-      - performance-*
       - bugprone-*
+      - performance-*
+      - readability-*
+    Remove:
+      - modernize-*
       - cppcoreguidelines-*
       - misc-*
-    Remove:
-      - misc-use-anonymous-namespace
-      - modernize-use-trailing-return-type
-      - readability-braces-around-statements
       - readability-identifier-length
-      - cppcoreguidelines-avoid-magic-numbers
       - readability-magic-numbers
-      - misc-non-private-member-variables-in-classes
+      - readability-braces-around-statements
+      - cppcoreguidelines-avoid-magic-numbers
 
 Completion:
   AllScopes: Yes
